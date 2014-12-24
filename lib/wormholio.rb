@@ -1,9 +1,10 @@
 require "wormholio/version"
+require "wormholio/ftp"
 
 module Wormholio
 
   module FTP
-    # TODO
+
     def self.upload(credentials,file,options={})
       Ftp.upload(credentials,file,options)
     end
@@ -11,6 +12,7 @@ module Wormholio
     def self.download(credendtials,local_path,filename,options={})
       Ftp.download(credentials,file,options)
     end
+
   end
 
   module FTPS
@@ -28,4 +30,5 @@ module Wormholio
   module S3
     # TODO
   end
+
 end
