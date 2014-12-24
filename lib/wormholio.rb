@@ -1,6 +1,7 @@
 require "wormholio/version"
 require "wormholio/ftp"
 require "wormholio/ftps"
+require "wormholio/sftp"
 
 module Wormholio
 
@@ -30,6 +31,16 @@ module Wormholio
 
   module SFTP
     # TODO
+    p 'GEM - SFTP'
+
+    def self.upload(credentials,local_path,filename)
+      Sftp.upload(credentials,local_path,filename)
+    end
+
+    def self.download(credentials,local_path,filename)
+      Sftp.download(credentials,local_path,filename)
+    end
+
   end
 
   module SCP
