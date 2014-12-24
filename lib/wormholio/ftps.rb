@@ -12,7 +12,7 @@ class Ftps
 
   def self.download(creds,local_path,filename,options={})
     p 'FTPS DOWNLOAD'
-    connect(creds)
+    connect(creds,options)
     @wormholio_ftps.chdir("#{creds['dir_path']}")
     @wormholio_ftps.getbinaryfile(filename,"#{local_path}#{filename}")
     close_connection()
