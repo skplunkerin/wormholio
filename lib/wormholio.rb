@@ -10,13 +10,22 @@ module Wormholio
     end
 
     def self.download(credendtials,local_path,filename,options={})
-      Ftp.download(credentials,file,options)
+      Ftp.download(credentials,local_path,filename,options)
     end
 
   end
 
   module FTPS
     # TODO
+
+    def self.upload(credentials,file,options={})
+      Ftps.upload(credentials,file,options)
+    end
+
+    def self.download(credendtials,local_path,filename,options={})
+      Ftps.download(credentials,local_path,filename,options)
+    end
+
   end
 
   module SFTP
