@@ -30,8 +30,6 @@ module Wormholio
   end
 
   module SFTP
-    # TODO
-    p 'GEM - SFTP'
 
     def self.upload(credentials,local_path,filename)
       Sftp.upload(credentials,local_path,filename)
