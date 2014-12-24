@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Christopher Reynolds"]
   spec.email         = ["reynolds87chris@gmail.com"]
   spec.summary       = %q{Currently under development... First gem.}
-  spec.description   = %q{If you want one gem that can utilize all file transfer methods, use Wormholio. Currently supported transfer method: FTP; soon to be supported: FTPS, SFTP, SCP & S3.}
+  spec.description   = %q{Currently under development... First gem. If you want one gem that can utilize all file transfer methods, use Wormholio. Currently supported transfer method: FTP; soon to be supported: FTPS, SFTP, SCP & S3.}
   spec.homepage      = "https://github.com/skplunkerin/wormholio"
   spec.license       = "MIT"
 
