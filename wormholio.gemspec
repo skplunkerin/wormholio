@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Wormholio::VERSION
   spec.authors       = ["Christopher Reynolds"]
   spec.email         = ["reynolds87chris@gmail.com"]
-  spec.summary       = %q{Currently under development... Upload/Download functionality for FTP, FTPS and SFTP.}
-  spec.description   = %q{Currently under development... (First gem) Wormholio provides simple Upload/Download functionality for all file transfer methods. Currently supported transfer methods: FTP, FTPS and SFTP; soon to be supported: SCP &amp; S3.}
+  spec.summary       = %q{(under development) Simple Upload/Download functionality for FTP, FTPS, SFTP and SCP.}
+  spec.description   = %q{Currently under development... (First gem) Wormholio provides simple Upload/Download functionality for all file transfer methods. Currently supported transfer methods: FTP, FTPS, SFTP and SCP; soon to be supported: S3.}
   spec.homepage      = "https://github.com/skplunkerin/wormholio"
   spec.license       = "MIT"
 
