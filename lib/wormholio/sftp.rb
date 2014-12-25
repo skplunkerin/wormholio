@@ -1,5 +1,5 @@
-require 'net/ssh'
-require 'net/sftp'
+require "net/ssh"
+require "net/sftp"
 
 class Sftp
 

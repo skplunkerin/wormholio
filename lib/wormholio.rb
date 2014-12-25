@@ -2,6 +2,7 @@ require "wormholio/version"
 require "wormholio/ftp"
 require "wormholio/ftps"
 require "wormholio/sftp"
+require "wormholio/scp"
 
 module Wormholio
 
@@ -43,6 +44,15 @@ module Wormholio
 
   module SCP
     # TODO
+
+    def self.upload(credentials,local_path,filename)
+      Scp.upload(credentials,local_path,filename)
+    end
+
+    def self.download(credentials,local_path,filename)
+      Scp.download(credentials,local_path,filename)
+    end
+
   end
 
   module S3
