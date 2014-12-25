@@ -3,6 +3,7 @@ require "wormholio/ftp"
 require "wormholio/ftps"
 require "wormholio/sftp"
 require "wormholio/scp"
+require "wormholio/s3_client"
 
 module Wormholio
 
@@ -56,6 +57,16 @@ module Wormholio
 
   module S3
     # TODO
+
+    p 'GEM - S3'
+    def self.upload(credentials,local_path,filename)
+      S3Client.upload(credentials,local_path,filename)
+    end
+
+    def self.download(credentials,local_path,filename)
+      S3Client.download(credentials,local_path,filename)
+    end
+
   end
 
 end

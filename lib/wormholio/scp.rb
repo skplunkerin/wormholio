@@ -16,13 +16,13 @@ class Scp
   end
 
   private
-  def self.connect(creds)
-    p 'ESTABLISH SCP CONNECTION'
-    host = creds["host"]
-    username = creds["username"]
-    password = creds["password"]
-    port = creds["port"]
+    def self.connect(creds)
+      p 'ESTABLISH SCP CONNECTION'
+      host = creds["host"]
+      username = creds["username"]
+      password = creds["password"]
+      port = creds["port"]
 
-    @wormholio_ssh = Net::SSH.start(host, username, :password => password, :port => port)
-  end
+      @wormholio_ssh = Net::SSH.start(host, username, :password => password, :port => port)
+    end
 end
