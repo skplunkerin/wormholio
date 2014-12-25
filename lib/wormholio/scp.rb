@@ -6,13 +6,13 @@ class Scp
   def self.upload(creds,local_path,filename)
     p 'SCP UPLOAD'
     connect(creds)
-    @ssh.scp.upload!("#{local_path}#{filename}","#{creds['dir_path']}#{filename}")
+    @wormholio_ssh.scp.upload!("#{local_path}#{filename}","#{creds['dir_path']}#{filename}")
   end
 
   def self.download(creds,local_path,filename)
     p 'SCP DOWNLOAD'
     connect(creds)
-    @ssh.scp.download!("#{creds['dir_path']}#{filename}","#{local_path}#{filename}")
+    @wormholio_ssh.scp.download!("#{creds['dir_path']}#{filename}","#{local_path}#{filename}")
   end
 
   private
@@ -23,6 +23,6 @@ class Scp
     password = creds["password"]
     port = creds["port"]
 
-    @ssh = Net::SSH.start(host, username, :password => password, :port => port)
+    @wormholio_ssh = Net::SSH.start(host, username, :password => password, :port => port)
   end
 end

@@ -43,7 +43,6 @@ module Wormholio
   end
 
   module SCP
-    # TODO
 
     def self.upload(credentials,local_path,filename)
       Scp.upload(credentials,local_path,filename)
