@@ -56,9 +56,7 @@ module Wormholio
   end
 
   module S3
-    # TODO
 
-    p 'GEM - S3'
     def self.upload(credentials,local_path,filename)
       S3Client.upload(credentials,local_path,filename)
     end
