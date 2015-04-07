@@ -22,7 +22,130 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### FTP:
+- **Note:** dir_path should look like "/folder/"; be sure to prepend/append "/"
+
+```
+hash = {
+  'host':'www.domain.com',     # domain to connect to
+  'username':'steven',         # username
+  'password':'Steve1',         # user's password
+  'dir_path':'/home/',         # directory path on server
+  'port':'21'                  # will default to 21 if not specified
+}
+options = {"debug"=>true}         # If debug set to true, will return errors for testing
+
+file = "#{Rails.root}/file.json"  # Path/name of file to upload
+
+  # To upload
+  Wormholio::FTP.upload( hash, file, options )
+
+local_path = "#{Rails.root}/"     # Where to download file to
+filename = "file.json"            # Name of file
+
+  # To download
+  Wormholio::FTP.download( hash, local_path, filename, options )
+```
+
+### FTPS:
+- **Note:** dir_path should look like "/folder/"; be sure to prepend/append "/"
+
+```
+hash = {
+  'host':'www.domain.com',     # domain to connect to
+  'username':'steven',         # username
+  'password':'Steve1',         # user's password
+  'dir_path':'/home/',         # directory path on server
+  'port':'21'                  # will default to 21 if not specified
+}
+options = {"debug"=>true}         # If debug set to true, will return errors for testing
+
+file = "#{Rails.root}/file.json"  # Path/name of file to upload
+
+  # To upload
+  Wormholio::FTPS.upload( hash, file, options )
+
+local_path = "#{Rails.root}/"     # Where to download file to
+filename = "file.json"            # Name of file
+
+  # To download
+  Wormholio::FTPS.download( hash, local_path, filename, options )
+```
+
+### SFTP:
+- **Note:** dir_path should look like "/folder/"; be sure to prepend/append "/"
+
+```
+hash = {
+  'host':'www.domain.com',     # domain to connect to
+  'username':'steven',         # username
+  'password':'Steve1',         # user's password
+  'dir_path':'/home/',         # directory path on server
+  'port':'21'                  # will default to 21 if not specified
+}
+options = {"debug"=>true}         # If debug set to true, will return errors for testing
+
+file = "#{Rails.root}/file.json"  # Path/name of file to upload
+
+  # To upload
+  Wormholio::SFTP.upload( hash, file, options )
+
+local_path = "#{Rails.root}/"     # Where to download file to
+filename = "file.json"            # Name of file
+
+  # To download
+  Wormholio::SFTP.download( hash, local_path, filename, options )
+```
+
+### SCP:
+- **Note:** dir_path should look like "/folder/"; be sure to prepend/append "/"
+
+```
+hash = {
+  'host':'www.domain.com',     # domain to connect to
+  'username':'steven',         # username
+  'password':'Steve1',         # user's password
+  'dir_path':'/home/',         # directory path on server
+  'port':'21'                  # will default to 21 if not specified
+}
+options = {"debug"=>true}         # If debug set to true, will return errors for testing
+
+file = "#{Rails.root}/file.json"  # Path/name of file to upload
+
+  # To upload
+  Wormholio::SCP.upload( hash, file, options )
+
+local_path = "#{Rails.root}/"     # Where to download file to
+filename = "file.json"            # Name of file
+
+  # To download
+  Wormholio::SCP.download( hash, local_path, filename, options )
+```
+
+### S3:
+- **Note:** dir_path should look like "folder/"; be sure to append "/" to this
+
+```
+hash = {
+  'bucket_name':'bucket-name',           # domain to connect to
+  'access_key_id':'big-ole-access-key',  # username
+  'secret_access_key':'big-ole-secret',  # user's password
+  'dir_path':'folder/'                   # directory path on server
+}
+
+local_path = "#{Rails.root}/"               # Path to file we want to upload
+filename = "file.json"                      # Name of file to upload
+
+  # To upload
+  Wormholio::S3.upload( hash, local_path, filename )
+
+local_path = "#{Rails.root}/"               # Path to download file to
+filename = "file.json"                      # Name we want download file to have
+
+  # To download
+  Wormholio::S3.download( hash, local_path, filename )
+```
+
 
 ## Contributing
 
